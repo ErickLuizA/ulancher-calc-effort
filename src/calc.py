@@ -21,6 +21,7 @@ def handle_calc(time, now=datetime.now()):
             return result
 
         start = datetime.strptime(start, "%H:%M")
+        now = datetime.strptime(now.strftime("%H:%M"), "%H:%M")
 
         minutes = (now - start).seconds / 60
 

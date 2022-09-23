@@ -1,4 +1,6 @@
 
+from datetime import datetime
+
 from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.shared.action.CopyToClipboardAction import \
@@ -31,7 +33,7 @@ class KeywordQueryEventListener(EventListener):
         )
 
         if time:
-            result = handle_calc(time)
+            result = handle_calc(time, datetime.now())
 
             item = ExtensionResultItem(
                 icon='images/icon.png',
